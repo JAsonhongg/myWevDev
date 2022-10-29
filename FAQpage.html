@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQS</title>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <style>
+        .question-style{
+            background-color: beige;
+        }
+    </style>
+</head>
+<body>
+    <h1>JSON AND AJAX TECHNIQUE</h1>
+    <!--Area to display loaded questions and answers-->
+    <script>
+        // let proxy = 'https://cors-anywhere.herokuapp.com/';
+        // let url = 'http://danieldangs.com/itwd6408/json/faqs.json';
+        let faqs = [];  
+        $.getJSON("MEDIA/faqs.json",
+            function(data){
+            //Loop through all questions and display on webpage
+            $.each(data, function(i, question){
+                //Display question and answer
+                $("#questions").append('<p class="question-style">' + question.question + '<br>' + question.answer + '</p>');
+            });
+            //Store these questions in the variable
+            faqs = data;
+            }
+        );
+    </script>
+
+    <!--Area to search questions and answers-->
+    <div style="padding-left: 80px;">
+        <input type="text" id="searchInput">
+        <input type="button" value="Search" id="searchBtn">
+        <div id="questions"></div>
+    </div>
+
+    <script>
+    //Add event to the button "search"
+    $("input#searchBtn").click(function(){
+        //Clear the questions
+        $("#questions").html("");
+        
+        //Use filter() method to get questions containing keywords
+        let searchKeyWord = $("input#searchInput").val();
+        let results = faqs.filter(function(faqs){
+        return faqs.question.indexOf(searchKeyWord) > -1;
+        });
+  
+        //Display the results on webpage
+        if (results.length == 0) {
+        //No results
+        $("#questions").html("No results!!!!!");
+        } else {
+        //Loop through all filted questions
+        for(var i=0; i < results.length; i++) {
+          $("#questions").append('<p class="question-style">' + results[i].question +'<br>' + results[i].answer + '</p>');
+            }
+        }
+    });
+    </script>
+
+</body>
+</html>

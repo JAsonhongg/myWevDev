@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Booking invoice sheet</title>
+        <style>
+            h1 {text-align:center;}
+            p.date {text-align:right;}
+            p.main {text-align:justify;}
+        </style>
+    </head>
+    <body>
+        <h1>Repair Booking</h1>
+        <hr>
+        <h2>Your info</h2>
+        <p>Customer Type: ${myBooking.customerType}</p>
+        <p>Name: ${myBooking.name}</p>
+        <p>Email: ${myBooking.email}</p>
+        <p>Phone: ${myBooking.phone}</p>
+
+        
+        <hr>
+        <h2>Cost</h2>
+        <p>Bond: $${myBooking.bond}</p>
+        <p>Service Fee: $${myBooking.service_fee}</p>
+        <p>Purchase Date: ${myBooking.purchaseDate}</P>
+    </body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<!------------------------------HEAD------------------------------------------------>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+	<link rel="stylesheet" type="text/css" href="CSS/Homepage.css">
+</head>
+
+<!------------------------------BODY------------------------------------------------>
+<body>
+	<!---------------------------------------------------->	
+	<!--Navigation menu section-->	
+	<div class="CurtainMenu">
+		<!--Icon and Tagline-->
+		<div class="logo-tagline">
+			<div class="logo">
+				<img src="MEDIA/global.png"/>
+			</div>
+			<div class="tagline">ITWD6.408
+			</div>
+		</div>
+		
+		<!--Desktop horizontal-menu-->
+		<div class="desktop-menu">
+			<div class="horizontal-nav">
+				<ul>
+					<li class="active"><a href="index.html">HOME</a></li>
+					<li><a href="fomrs.html">FORMS</a></li>
+					<li><a href="xml-jsaon.html">XML/JSON</a></li>
+					<li><a href="js-demo.html">JAVASCRIPT</a></li>
+					<li><a href="my-research.html">RESEARCH</a></li>	
+				</ul>
+			</div>
+		</div>
+		
+		<!--Curtain Menu Icon-->
+		<p class="menu-icon-style" onclick="openNav()">≡</p>
+	</div>
+	
+	<!--Hide the curtain menu as default when loading the page-->
+	<nav id="curtain-nav">
+		<!--Add a close button (X) hyperlink on the top left corner-->
+		<a href="javascript:void(0)" class="nav-close-button" onclick="closeNav()">❌</a>
+		<div class="curtain-nav-content">
+			<ul>
+				<li class="active"><a href="index.html">HOME</a></li>
+				<li><a href="fomrs.html">FORMS</a></li>
+				<li><a href="xml-jsaon.html">XML/JSON</a></li>
+				<li><a href="js-demo.html">JAVASCRIPT</a></li>
+				<li><a href="my-research.html">RESEARCH</a></li>	
+			</ul>
+		</div>
+	</nav>
+	
+	<!---------------------------------------------------->	
+	<!--Main content section-->
+	<main>
+		<section class="showcase">
+			<div class="showcase-bg-image" >	
+			</div>
+			<div class="showcase-bg-text">
+				
+				<h1>Advanced Internet And Web Learning Protfolio</h1>
+				<p>For the desire of developing a website of mine and wish you will like this website.</p>
+			</div>		
+		</section>
+		
+		<section class="bio-webtechno">
+			<article class="bio">
+				<h1>BIO</h1>
+				<div class="portrai-paragraph">
+					<div class="bio-portrait">
+						<img src="MEDIA/FullSizeRender.jpg"/>
+					</div>
+					<p class="bio-paragraph"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id lectus quis mauris porttitor egestas at a lacus. Sed at nibh a nisl eleifend semper nec at sem. Nullam non ex quis sapien porta lobortis quis eu purus. Duis laoreet, libero eu maximus fringilla, enim lectus ultricies arcu, et molestie sem quam nec justo.
+					</p>
+				</div>
+			</article>
+			
+			<article class="webtechno"> 
+				<h1>MY WEB TECHNOLOGIES</h1>
+				<p>Top 5 technologies <br>
+				<ol>
+					<li>Visual Studio Code</li>
+					<li>Mac mini (2018)</li>
+					<li>W3 School</li>
+					<li>Github</li>
+					<li>MDN Web Docs</li>
+				</ol>				
+			</article>
+		</section>
+		
+		<section class="competences">
+			<h1>Our Services</h1>
+			
+			<div class="flip-box-area">
+			
+				<div class="flip-box-header">
+					<h4>Hover over the box to flip it over</h4>
+				</div>
+				
+				<!--Create a 1x3 card layout using CSS flex box -->
+				<div class="topics_container" >
+					<div class="topics_box">
+					
+						<!--3D Flip Box: https://www.w3schools.com/howto/howto_css_flip_box.asp-->				
+						<!--Add the first Flip box-->
+						<div class="flip-box">
+							<div class="flip-box-inner">
+								<!--Front side of the Flip Box-->
+								<div class="flip-box-front">	
+									<h3>Laptop Repair</h3>
+									<img src="MEDIA/Laptop.jpg" alt="Laptop image">										
+								</div>
+								<!--Back side of the Flip Box-->
+								<div class="flip-box-back">		
+									<h3>Laptop Repair</h3>
+									<p>	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id lectus quis mauris porttitor egestas at a lacus. Sed at nibh a nisl eleifend semper nec at sem. Nullam non ex quis sapien porta lobortis quis eu purus. Duis laoreet, libero eu maximus fringilla, enim lectus ultricies arcu, et molestie sem quam nec justo.
+									</p>
+				
+								</div>
+							</div>
+						</div>	
+					</div>
+					
+					
+					<div class="topics_box">
+					
+						<!--3D Flip Box: https://www.w3schools.com/howto/howto_css_flip_box.asp-->							
+						<!--Add the second Flip box-->
+						<div class="flip-box">
+							<div class="flip-box-inner">
+								<!--Front side of the Flip Box-->
+								<div class="flip-box-front">	
+									<h3>Screen Repair</h3>
+									<img src="MEDIA/Screen.jpg" alt="Screen image">										
+								</div>
+								<!--Back side of the Flip Box-->
+								<div class="flip-box-back">		
+									<h3>Screen Repair</h3>
+									<p>	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id lectus quis mauris porttitor egestas at a lacus. Sed at nibh a nisl eleifend semper nec at sem. Nullam non ex quis sapien porta lobortis quis eu purus. Duis laoreet, libero eu maximus fringilla, enim lectus ultricies arcu, et molestie sem quam nec justo.
+									</p>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="topics_box">						
+						<!--3D Flip Box: https://www.w3schools.com/howto/howto_css_flip_box.asp-->							
+						<!--Add the third Flip box-->
+						<div class="flip-box">
+							<div class="flip-box-inner">
+								<!--Front side of the Flip Box-->
+								<div class="flip-box-front">	
+									<h3>Handware</h3>
+									<img src="MEDIA/Hardware.jpg" alt="Hardware image">										
+								</div>
+								<!--Back side of the Flip Box-->
+								<div class="flip-box-back">		
+									<h3>Handware</h3>
+									<p>	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id lectus quis mauris porttitor egestas at a lacus. Sed at nibh a nisl eleifend semper nec at sem. Nullam non ex quis sapien porta lobortis quis eu purus. Duis laoreet, libero eu maximus fringilla, enim lectus ultricies arcu, et molestie sem quam nec justo.
+									</p>
+								</div>
+							</div>
+						</div>										
+
+					</div>					
+				</div>				
+			</div>						
+		</section>
+		
+		
+		<section class="statement-of-authenticity"> 
+			<h1>STATEMENT OF AUTHENTICITY</h1>
+			<p>
+				“I confirm that:<br>
+				This is an original assessment and is entirely my own work.<br>
+				It contains no material previously published or written by another person or myself except where due acknowledgement is made in the text.</br>
+				No material which to a substantial extent, has been submitted for any other academic course, is included without acknowledgement.”<br>
+			</p>
+		</section>				
+	</main>
+	
+	<!---------------------------------------------------->	
+	<!--Footer section-->
+	<footer>
+		<div> @Created by: Dehao Hong <br />
+			Contact me at: <a href="sudongpo1hao@163.com">Sudongpo1hao@163.com</a>
+		</div>
+	</footer>
+	
+	<!--Embed the js file at the bottom of the html file-->
+	<script>
+		function openNav() {
+			document.getElementById("curtain-nav").style.width = "50%";			
+		}
+
+		function closeNav() {
+			document.getElementById("curtain-nav").style.width = "0%";			
+		}		
+	</script>
+</body>
+</html>
+

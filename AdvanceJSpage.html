@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<!------------------------------HEAD------------------------------------------------>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+	<link rel="stylesheet" type="text/css" href="CSS/AdvanceJSpage.css">
+	<script src="JS/mapdata.js"></script>
+    <script src="JS/countrymap.js"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+
+</head>
+
+<!------------------------------BODY------------------------------------------------>
+<body  onload="checkCookie();">
+	
+	<!---------------------------------------------------->	
+	<!--Navigation menu section-->	
+	<div class="responsive-nav-bar-area">
+		<h1>javascript Extension </h2>
+		<br>
+		<h3>I confirm that:</h3>
+		<ul>
+			<li>This is an original assessment and is entirely my work.</li>
+			<li>It contains no material previously published or written by another person or myself except where
+				due acknowledgement is made in the text.</li>
+			<li>No material which to a substantial extent, has been submitted for any other academic course, is
+				included without acknowledgement.</li>
+		</ul>
+	</div>
+		
+	
+
+	<!---------------------------------------------------->	
+	<!--Main content section-->
+	<main id="main">		¬
+		<!--Internal menu: contain 4 buttons-->
+		<section class="internal-menu-area">	
+			<div class="internal-menu-row">
+				<div class="internal-menu-row-box">
+					<button class="demo-button" onclick="showDemo(0)">Demo 1</button>
+				</div>
+				<div class="internal-menu-row-box">
+					<button class="demo-button" onclick="showDemo(1)">Demo 2</button>
+				</div>
+			</div>
+			
+			<div class="internal-menu-row">
+				<div class="internal-menu-row-box">
+					<button class="demo-button" onclick="showDemo(2)">Demo 3</button>
+				</div>
+				<div class="internal-menu-row-box">
+					<button class="demo-button" onclick="showDemo(3)">Demo 4</button>
+				</div>
+			</div>
+
+			<div class="internal-menu-row">
+				<div class="internal-menu-row-box">
+					<button class="demo-button" onclick="showDemo(4)">Demo 5</button>
+				</div>
+				
+			</div>
+
+		</section>
+		
+		<!--Demo area: contain 4 boxes for 4 demos-->
+		<section class="demo-area">
+			<article class="demo-box" > 
+				<h2>remember user preferences with local storage</h2>
+				<label style="font-size:20px;"> Pick up a color of your page:</label> 
+				<input type="color" id="pickColor" onchange="changeColor()" >	
+				<br>
+				<!--HTML Form-->
+				<form name = "myform" >
+					<label>Enter your name: </label>
+					<input type = "text" name = "customerName"/>
+					<input type = "button" value = "Set Cookie" onclick = "saveCookie();"/>
+				</form>  
+			</article>
+
+			<div class="demo-box"> 
+				<h2>all shops in different regions(SVG)</h2>
+				<div id="map"></div>
+				<br>
+				<small>Reference: software, llc. (2022, October 24). HTML5 Country Map Customization Tool. Simplemaps. https://simplemaps.com/custom/country/63j1qXI8#start</small>
+			</div>
+
+			<article class="demo-box">
+				<div>
+					<!--Drag Area Box 1: Available Courtesy Phones-->
+					<div class="drag-area">
+						<div class="drop-area">Available Courtesy Laptop</div>
+						<div class="box">HP Pavilion</div>
+						<div class="box">Other laptops</div>
+						<div class="box">Charger</div>
+					</div>
+					<!--Drag Area Box 2: Your Choice-->
+					<div class="drag-area">
+						<div class="drop-area">Your Selection</div>
+					</div>
+					<!--Display the outcome-->
+					<div class="result">-</div>
+				</div>
+			</article>
+
+			<article class="demo-box">
+				<div id="container" class="container">
+					<img src="https://cdn.pixabay.com/photo/2020/01/02/16/38/chatbot-4736275_960_720.png" height="400vh" alt="Chatbot clipart">
+					<div id="chat" class="chat">
+						<div id="messages" class="messages"></div>
+						<input id="inputquestion" type="text" placeholder="Write something..." autocomplete="off" autofocus="true" />
+					</div>
+				</div>
+			</article>
+
+			<div class="demo-box">
+				<h3>An iframe with the products of a watch:<h3>
+				<iframe src="MEDIA/3Dwatch/codes/watch.html" width="100%" height="700">
+				</iframe>
+				<small>Reference:
+				王中尧. (2022, September 23). 3DWatchForJS. GitHub. https://github.com/CoderZYWang/3DWatchForJS</small>				
+			</div>
+		</section>
+	</main>
+	
+	<!---------------------------------------------------->	
+	<!--Footer section-->
+	<footer id ="footer">
+		<div> @Created by: Dehao Hong <br />
+			Contact me at: <a href="Sudongpo1hao@163.com">Sudongpo1hao@163.com</a>
+		</div>
+	</footer>
+	
+	<!--Embed the js file at the bottom of the html file-->
+	<script type="text/javascript" src="JS/AdvanceJSpage.js">
+	</script>
+
+	<script>
+		showDemo(0);
+	</script>
+	
+
+</body>
+</html>
+
